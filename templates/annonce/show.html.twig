@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonce{% endblock %}
+
+{% block body %}
+    <h1>Annonce "{{ annonce.nom }}"</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Nom</th>
+                <td>{{ annonce.nom }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ annonce.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ annonce.prix }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('annonce_index') }}">Retour</a>
+{% endblock %}

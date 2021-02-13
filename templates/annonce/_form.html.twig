@@ -1,0 +1,22 @@
+{{ form_start(form) }}
+<div class="errors">
+    {{ form_errors(form) }}
+</div>
+<div class="row">
+    <div class="col-12">{{ form_row(form.nom, { 'label': 'Nom Produit' }) }}</div>
+    <div class="col-12">{{ form_row(form.categorie, { 'label': 'Catégorie' }) }}</div>
+</div>
+<div class="row">
+    <div class="col-12">{{ form_row(form.prix, { 'label': 'Prix' }) }}</div>
+    <div class="col-12">{{ form_row(form.description, { 'label': 'Description' }) }}</div>
+</div>
+<div class="row">
+    <div class="col">
+        <a href="{{ path('annonce_index')}}" class="btn btn-outline-dark">Retour</a>
+    </div>
+    <div class="col text-right">{{ form_row(form.valider, { 'label': 'Valider',
+            'attr': {'class': 'btn btn-success'} }) }}
+    </div>
+
+</div>
+{{ form_end(form) }}
