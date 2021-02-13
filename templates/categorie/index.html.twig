@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categorie index{% endblock %}
+
+{% block body %}
+
+    <h1>Toutes les catégories</h1>
+    <div class="mdc-touch-target-wrapper">
+        <a class="mdc-button mdc-button--touch" href="{{ path('annonce_index')}}">
+            <span class="mdc-button__ripple"></span>
+            <span class="mdc-button__label">Toutes les annonces</span>
+            <span class="mdc-button__touch"></span>
+        </a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for categorie in categories %}
+            <tr>
+                <td>{{ categorie.nom }}</td>
+                <td>
+                    <a href="{{ path('categorie_show_annonces', {'id': categorie.id}) }}">Voir les annonces</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

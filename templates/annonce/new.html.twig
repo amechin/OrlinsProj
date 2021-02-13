@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Annonce{% endblock %}
+
+{% block body %}
+    <h1>Nouvelle annonce</h1>
+    <div class="container d-flex align-items-center justify-content-center">
+        {{ include('annonce/_form.html.twig') }}
+    </div>
+{% endblock %}

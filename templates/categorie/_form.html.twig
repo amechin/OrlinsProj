@@ -1,0 +1,17 @@
+        {{ form_start(form) }}
+        <div class="errors">
+            {{ form_errors(form) }}
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.nom, { 'label': 'Nom Produit' }) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="{{ path('annonce_index')}}" class="btn btn-outline-dark">Retour</a>
+            </div>
+            <div class="col-md-6 text-right">{{ form_row(form.valider, { 'label': 'Valider',
+                    'attr': {'class': 'btn btn-light'} }) }}
+            </div>
+
+        </div>
+        {{ form_end(form) }}
